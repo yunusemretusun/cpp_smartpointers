@@ -1,12 +1,11 @@
-#include <QCoreApplication>
-#include "ResourceEx.h"
-#include "Person.h"
+#include "src/ResourceEx.h"
+#include "src/Person.h"
+
+
 void whenPtrDeleteFunc(ResourceEx *pRes); //forward decleration
 
 int main(int argc, char *argv[])
 {
-    QCoreApplication a(argc, argv);
-
         //unique_ptr
         {
             std::unique_ptr<ResourceEx> res {new ResourceEx()};
@@ -86,7 +85,7 @@ int main(int argc, char *argv[])
     }
     Person p;
 
-    return a.exec();
+    return 0;
 }
 
 
